@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters", "IDSmarters\IDSmarters.csproj", "{55105C2B-E69C-4274-A345-84A7C0935A59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.API", "IDSmarters.API\IDSmarters.API.csproj", "{7CD66C81-462E-49ED-8C56-B1C40659BC48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.Application", "IDSmarters.Application\IDSmarters.Application.csproj", "{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarter.Domain", "IDSmarter.Domain\IDSmarter.Domain.csproj", "{7B129A08-E153-4C06-8BDF-1CAAE15FBA64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.Infrastructure", "IDSmarters.Infrastructure\IDSmarters.Infrastructure.csproj", "{1A4582FB-59D0-4C33-A03A-D164888EDE51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.StudentPortal", "IDSmarters.StudentPortal\IDSmarters.StudentPortal.csproj", "{096C7ADD-1D62-4242-A047-DC27388CBE21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55105C2B-E69C-4274-A345-84A7C0935A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55105C2B-E69C-4274-A345-84A7C0935A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55105C2B-E69C-4274-A345-84A7C0935A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55105C2B-E69C-4274-A345-84A7C0935A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD66C81-462E-49ED-8C56-B1C40659BC48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD66C81-462E-49ED-8C56-B1C40659BC48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD66C81-462E-49ED-8C56-B1C40659BC48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD66C81-462E-49ED-8C56-B1C40659BC48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B129A08-E153-4C06-8BDF-1CAAE15FBA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B129A08-E153-4C06-8BDF-1CAAE15FBA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B129A08-E153-4C06-8BDF-1CAAE15FBA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B129A08-E153-4C06-8BDF-1CAAE15FBA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4582FB-59D0-4C33-A03A-D164888EDE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4582FB-59D0-4C33-A03A-D164888EDE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4582FB-59D0-4C33-A03A-D164888EDE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4582FB-59D0-4C33-A03A-D164888EDE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{096C7ADD-1D62-4242-A047-DC27388CBE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{096C7ADD-1D62-4242-A047-DC27388CBE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{096C7ADD-1D62-4242-A047-DC27388CBE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{096C7ADD-1D62-4242-A047-DC27388CBE21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EF60D45-69EF-4A74-8428-7840A1030591}
+	EndGlobalSection
+EndGlobal

@@ -35,8 +35,8 @@ namespace IDSmarter.Domain.Entities
         public string Document3 { get; set; }
         public string Document4 { get; set; }
 
-        public ICollection<StudentDetail>? StudentDetail { get; set; }
-        public ICollection<Enrollment>? Enrollment { get; set; }
-        public ICollection<Student>? Student { get; set; }
+        public ICollection<StudentDetail>? StudentDetails { get; set; }
+        public ICollection<Enrollment>? Enrollments { get; set; }
+        public ICollection<Student>? Students { get; set; }
     }
 }

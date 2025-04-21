@@ -21,9 +21,9 @@ namespace IDSmarter.Domain.Entities
         public int AcademicYear { get; set; }
 
         public int CourseId { get; set; }
-        public Course Course { get; set; }
+        public Course Courses { get; set; }
 
         public int PreRegistrationId { get; set; }
-        public PreRegistration PreRegistration { get; set; }
+        public PreRegistration PreRegistrations { get; set; }
     }
 }

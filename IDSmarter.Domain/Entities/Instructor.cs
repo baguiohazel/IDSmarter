@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace IDSmarter.Domain.Entities
 {
@@ -16,12 +12,13 @@ namespace IDSmarter.Domain.Entities
         public int TotalStudents { get; set; }
 
         public int InstructorDetailId { get; set; }
-        public InstructorDetail InstructorDetail { get; set; }
+        public InstructorDetail InstructorDetails { get; set; }
 
-        public ICollection<Course>? Course { get; set; }
-        public ICollection<Admin>? Admin { get; set; }
-        public ICollection<Dean>? Dean { get; set; }
-        public Student Student { get; set; }
+        public ICollection<Course>? Courses { get; set; }
+        public ICollection<Admin>? Admins { get; set; }
+        public ICollection<Dean>? Deans { get; set; }
         public int StudentId { get; set; }
+        public Student Students { get; set; }
+      
     }
 }

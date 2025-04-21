@@ -5,8 +5,6 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters", "IDSmarters\IDSmarters.csproj", "{55105C2B-E69C-4274-A345-84A7C0935A59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.API", "IDSmarters.API\IDSmarters.API.csproj", "{7CD66C81-462E-49ED-8C56-B1C40659BC48}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.Application", "IDSmarters.Application\IDSmarters.Application.csproj", "{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarter.Domain", "IDSmarter.Domain\IDSmarter.Domain.csproj", "{7B129A08-E153-4C06-8BDF-1CAAE15FBA64}"
@@ -14,6 +12,18 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.Infrastructure", "IDSmarters.Infrastructure\IDSmarters.Infrastructure.csproj", "{1A4582FB-59D0-4C33-A03A-D164888EDE51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.StudentPortal", "IDSmarters.StudentPortal\IDSmarters.StudentPortal.csproj", "{096C7ADD-1D62-4242-A047-DC27388CBE21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmaters.DeanPortal", "IDSmaters.DeanPortal\IDSmaters.DeanPortal.csproj", "{BCFA8866-3506-42B9-9548-BE818A05522B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.AdminPortal", "IDSmarters.AdminPortal\IDSmarters.AdminPortal.csproj", "{634FBA78-C5C5-475E-AA52-2F4775AEC7F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.InstructorPortal", "IDSmarters.InstructorPortal\IDSmarters.InstructorPortal.csproj", "{F04F8909-920A-400A-A4B4-3A7C7B094DBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.APIs", "IDSmarters.APIs\IDSmarters.APIs.csproj", "{7122A2CC-6824-4038-A94E-3965A99CCAE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.Shared", "IDSmarters.Shared\IDSmarters.Shared.csproj", "{B37085F6-6D2D-4176-99D2-4B9FE73840AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.Websites", "IDSmarters.Websites\IDSmarters.Websites.csproj", "{F26B4DE1-B586-430F-A60D-A2C208CBF875}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +35,6 @@ Global
 		{55105C2B-E69C-4274-A345-84A7C0935A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55105C2B-E69C-4274-A345-84A7C0935A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55105C2B-E69C-4274-A345-84A7C0935A59}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7CD66C81-462E-49ED-8C56-B1C40659BC48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CD66C81-462E-49ED-8C56-B1C40659BC48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CD66C81-462E-49ED-8C56-B1C40659BC48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CD66C81-462E-49ED-8C56-B1C40659BC48}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5B8E6C7-0DED-43D6-B67C-51F1FA03FEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +51,30 @@ Global
 		{096C7ADD-1D62-4242-A047-DC27388CBE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{096C7ADD-1D62-4242-A047-DC27388CBE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{096C7ADD-1D62-4242-A047-DC27388CBE21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFA8866-3506-42B9-9548-BE818A05522B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFA8866-3506-42B9-9548-BE818A05522B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFA8866-3506-42B9-9548-BE818A05522B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFA8866-3506-42B9-9548-BE818A05522B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{634FBA78-C5C5-475E-AA52-2F4775AEC7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634FBA78-C5C5-475E-AA52-2F4775AEC7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634FBA78-C5C5-475E-AA52-2F4775AEC7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634FBA78-C5C5-475E-AA52-2F4775AEC7F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04F8909-920A-400A-A4B4-3A7C7B094DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04F8909-920A-400A-A4B4-3A7C7B094DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04F8909-920A-400A-A4B4-3A7C7B094DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04F8909-920A-400A-A4B4-3A7C7B094DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7122A2CC-6824-4038-A94E-3965A99CCAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7122A2CC-6824-4038-A94E-3965A99CCAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7122A2CC-6824-4038-A94E-3965A99CCAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7122A2CC-6824-4038-A94E-3965A99CCAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37085F6-6D2D-4176-99D2-4B9FE73840AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37085F6-6D2D-4176-99D2-4B9FE73840AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37085F6-6D2D-4176-99D2-4B9FE73840AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37085F6-6D2D-4176-99D2-4B9FE73840AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26B4DE1-B586-430F-A60D-A2C208CBF875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26B4DE1-B586-430F-A60D-A2C208CBF875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26B4DE1-B586-430F-A60D-A2C208CBF875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26B4DE1-B586-430F-A60D-A2C208CBF875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

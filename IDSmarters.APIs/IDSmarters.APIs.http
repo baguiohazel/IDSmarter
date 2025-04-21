@@ -1,0 +1,6 @@
+@IDSmarters.APIs_HostAddress = http://localhost:5253
+
+GET {{IDSmarters.APIs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

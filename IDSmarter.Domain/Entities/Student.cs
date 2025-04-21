@@ -14,9 +14,9 @@ namespace IDSmarter.Domain.Entities
         public string ProfilePictureUrl { get; set; }
 
         public int PreRegistrationId { get; set; }
-        public PreRegistration PreRegistration { get; set; }
+        public PreRegistration PreRegistrations { get; set; }
 
-        public ICollection<StudentDetail>? StudentDetail { get; set; }
-        public ICollection<Grades>? Grade { get; set; }
+        public ICollection<StudentDetail>? StudentDetails { get; set; }
+        public ICollection<Grade>? Grades { get; set; }
     }
 }

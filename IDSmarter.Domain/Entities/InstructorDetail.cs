@@ -10,14 +10,14 @@ namespace IDSmarter.Domain.Entities
     {
         public int Id { get; set; }
         public int ProgramId { get; set; }
-        public DepProgram Program { get; set; }
+        public DepProgram Programs { get; set; }
         public int StrandId { get; set; }
-        public Strand Strand { get; set; }
+        public Strand Strands { get; set; }
         public int ScheduleId { get; set; }
-        public Schedule Schedule { get; set; }
+        public Schedule Schedules { get; set; }
         public int PreRegistrationId { get; set; }
-        public PreRegistration PreRegistration { get; set; }
+        public PreRegistration PreRegistrations { get; set; }
 
-        public ICollection<Instructor>? Instructor { get; set; }
+        public ICollection<Instructor>? Instructors { get; set; }
     }
 }

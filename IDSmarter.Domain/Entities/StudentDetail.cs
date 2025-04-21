@@ -10,15 +10,15 @@ namespace IDSmarter.Domain.Entities
     {
         public int Id { get; set; }
         public int EnrollmentId { get; set; }
-        public Enrollment Enrollment { get; set; }
+        public Enrollment Enrollments { get; set; }
 
         public int ProgramId { get; set; }
-        public DepProgram Program { get; set; }
+        public DepProgram Programs { get; set; }
         public int CourseId { get; set; }
-        public Course Course { get; set; }
+        public Course Courses { get; set; }
         public int StrandId { get; set; }
-        public Strand Strand { get; set; }
+        public Strand Strands { get; set; }
         public int ScheduleId { get; set; }
-        public Schedule Schedule { get; set; }
+        public Schedule Schedules { get; set; }
     }
 }

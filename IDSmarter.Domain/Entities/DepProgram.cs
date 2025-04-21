@@ -12,7 +12,7 @@ namespace IDSmarter.Domain.Entities
         public int YearLevel { get; set; }
         public string Name { get; set; }
 
-        public ICollection<Student>? Student { get; set; }
-        public ICollection<PreRegistration>? PreRegistration { get; set; }
+        public ICollection<Student>? Students { get; set; }
+        public ICollection<PreRegistration>? PreRegistrations { get; set; }
     }
 }

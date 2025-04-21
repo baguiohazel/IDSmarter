@@ -15,9 +15,9 @@ namespace IDSmarter.Domain.Entities
         public string Address { get; set; }
         public int TotalStudent { get; set; }
 
-        public ICollection<Student>? Student { get; set; }
-        public ICollection<Instructor>? Instructor { get; set; }
-        public ICollection<Admin>? Admin { get; set; }
+        public ICollection<Student> Students { get; set; }
+        public ICollection<Instructor> Instructors { get; set; }
+        public ICollection<Admin> Admins { get; set; }
         public int StudentId { get; set; }
         public int InstructorId { get; set; }
     }

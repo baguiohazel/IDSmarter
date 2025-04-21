@@ -14,7 +14,7 @@ namespace IDSmarter.Domain.Entities
         public TimeSpan EndTime { get; set; }
         public string Room { get; set; }
 
-        public ICollection<InstructorDetail>? InstructorDetail { get; set; }
+        public ICollection<InstructorDetail>? InstructorDetails { get; set; }
 
     }
 } 

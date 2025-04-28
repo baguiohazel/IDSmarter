@@ -1,5 +1,4 @@
 ﻿
-
 namespace IDSmarter.Domain.Entities
 {
     public class Admin

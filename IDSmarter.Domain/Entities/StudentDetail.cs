@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace IDSmarter.Domain.Entities
 {
     public class StudentDetail
@@ -11,7 +6,6 @@ namespace IDSmarter.Domain.Entities
         public int Id { get; set; }
         public int EnrollmentId { get; set; }
         public Enrollment Enrollments { get; set; }
-
         public int ProgramId { get; set; }
         public DepProgram Programs { get; set; }
         public int CourseId { get; set; }

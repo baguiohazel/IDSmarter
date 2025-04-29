@@ -1,137 +1,53 @@
-using IDSmarters.Infrastructure.Extensions;
+using IDSmarters.API.Data;
 using Microsoft.AspNetCore.Identity;
-using IDSmarters.Infrastructure.Data;
-
-using System;
-using IDSmarter.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using IDSmarters.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add infrastructure (DbContext)
-builder.Services.AddInfrastructure(builder.Configuration);
+// Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-// Add Identity with Role
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddControllersWithViews();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
-builder.Services.AddControllers();
 
 var app = builder.Build();
 
-app.UseMiddleware<ExceptionMiddleware>();
-
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseMigrationsEndPoint();
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 
-app.UseCors("AllowAll");
+app.UseRouting();
 
-app.UseAuthentication();
 app.UseAuthorization();
 
-// ?? Map API endpoints
-app.MapControllers();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
+
+app.Run();
 
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    try
-    {
-        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-        var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
-
-        // 1. Seed Roles
-        string[] roles = { "Admin", "Dean", "Instructor", "Student" };
-        foreach (var role in roles)
-        {
-            if (!await roleManager.RoleExistsAsync(role))
-            {
-                await roleManager.CreateAsync(new IdentityRole(role));
-            }
-        }
-
-        // 2. Seed Admin
-        var adminEmail = "admin@idsmarters.com";
-        if (await userManager.FindByEmailAsync(adminEmail) == null)
-        {
-            var admin = new ApplicationUser
-            {
-                UserName = "superadmin",
-                Email = adminEmail,
-                FirstName = "IDSC",
-                LastName = "Ligao"
-            };
-
-            await userManager.CreateAsync(admin, "Admin@1234");
-            await userManager.AddToRoleAsync(admin, "Admin");
-        }
-
-        // 3. Seed Deans (one per department)
-        string[] departments = { "HM", "TM", "IT", "BA", "CRIM", "EDUC", "SHS" };
-        foreach (var dept in departments)
-        {
-            var deanEmail = $"dean.{dept.ToLower()}@idsmarters.com";
-            if (await userManager.FindByEmailAsync(deanEmail) == null)
-            {
-                var dean = new ApplicationUser
-                {
-                    UserName = $"dean_{dept}",
-                    Email = deanEmail,
-                    FirstName = "Dean",
-                    LastName = dept,
-                    Department = dept // Add Department property to ApplicationUser
-                };
-
-                await userManager.CreateAsync(dean, $"Dean.{dept}@1234");
-                await userManager.AddToRoleAsync(dean, "Dean");
-            }
-        }
-
-        // 4. Seed 10 Instructors
-        for (int i = 1; i <= 10; i++)
-        {
-            var instructorEmail = $"instructor{i}@idsmarters.com";
-            if (await userManager.FindByEmailAsync(instructorEmail) == null)
-            {
-                var instructor = new ApplicationUser
-                {
-                    UserName = $"instructor_{i}",
-                    Email = instructorEmail,
-                    FirstName = $"Instructor",
-                    LastName = $"#{i}",
-                    Department = departments[i % departments.Length] // Assign rotating departments
-                };
-
-                await userManager.CreateAsync(instructor, $"Instructor{i}@1234");
-                await userManager.AddToRoleAsync(instructor, "Instructor");
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "Seeding failed");
-    }
+    await IdentityInitializer.SeedRolesAndAdmin(services);
 }
-
-app.Run();
-
-

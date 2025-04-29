@@ -26,6 +26,7 @@ namespace IDSmarters.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Admin>()
                 .HasOne(a => a.Students)
@@ -151,8 +152,6 @@ namespace IDSmarters.Infrastructure.Data
                 .HasOne(sd => sd.Schedules)
                 .WithMany()
                 .HasForeignKey(sd => sd.ScheduleId);
-
-            base.OnModelCreating(modelBuilder);
         }
     }
 }

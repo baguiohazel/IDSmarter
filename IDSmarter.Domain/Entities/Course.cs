@@ -1,4 +1,5 @@
 ﻿
+
 namespace IDSmarter.Domain.Entities
 {
     public class Course

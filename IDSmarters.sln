@@ -19,11 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.AdminPortal", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.InstructorPortal", "IDSmarters.InstructorPortal\IDSmarters.InstructorPortal.csproj", "{F04F8909-920A-400A-A4B4-3A7C7B094DBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.APIs", "IDSmarters.APIs\IDSmarters.APIs.csproj", "{7122A2CC-6824-4038-A94E-3965A99CCAE8}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.Shared", "IDSmarters.Shared\IDSmarters.Shared.csproj", "{B37085F6-6D2D-4176-99D2-4B9FE73840AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.Websites", "IDSmarters.Websites\IDSmarters.Websites.csproj", "{F26B4DE1-B586-430F-A60D-A2C208CBF875}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDSmarters.API", "IDSmarters.API\IDSmarters.API.csproj", "{4EF104E7-50C9-4FC1-949A-7B6DCEE861C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +63,10 @@ Global
 		{F04F8909-920A-400A-A4B4-3A7C7B094DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F04F8909-920A-400A-A4B4-3A7C7B094DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F04F8909-920A-400A-A4B4-3A7C7B094DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7122A2CC-6824-4038-A94E-3965A99CCAE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7122A2CC-6824-4038-A94E-3965A99CCAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7122A2CC-6824-4038-A94E-3965A99CCAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7122A2CC-6824-4038-A94E-3965A99CCAE8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B37085F6-6D2D-4176-99D2-4B9FE73840AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B37085F6-6D2D-4176-99D2-4B9FE73840AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B37085F6-6D2D-4176-99D2-4B9FE73840AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,10 +75,6 @@ Global
 		{F26B4DE1-B586-430F-A60D-A2C208CBF875}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F26B4DE1-B586-430F-A60D-A2C208CBF875}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F26B4DE1-B586-430F-A60D-A2C208CBF875}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EF104E7-50C9-4FC1-949A-7B6DCEE861C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EF104E7-50C9-4FC1-949A-7B6DCEE861C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EF104E7-50C9-4FC1-949A-7B6DCEE861C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EF104E7-50C9-4FC1-949A-7B6DCEE861C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
